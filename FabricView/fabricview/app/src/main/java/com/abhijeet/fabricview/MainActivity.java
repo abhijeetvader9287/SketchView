@@ -103,13 +103,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                fabricView.setBackgroundColor(Color.TRANSPARENT);
+                fabricView.setBackgroundColor(Color.WHITE);
                 fabricView.setDrawingCacheEnabled(true);
                 Bitmap bitmap = fabricView.getDrawingCache();
 
                 Canvas c = new Canvas(bitmap);
 
-                c.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+                c.drawColor(Color.WHITE, PorterDuff.Mode.CLEAR);
                 fabricView.draw(c);
                 ByteArrayOutputStream bytes = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
